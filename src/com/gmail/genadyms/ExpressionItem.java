@@ -7,15 +7,13 @@ public class ExpressionItem {
     private final List<StringBuilder> operands;
     private StringBuilder currentOperand;
 
-    ExpressionItem() {
+    public ExpressionItem() {
         operands = new LinkedList<>();
-        currentOperand = new StringBuilder();
-        operands.add(currentOperand);
+        updateOperands();
     }
 
     public void changeOperand() {
-        currentOperand = new StringBuilder();
-        operands.add(currentOperand);
+        updateOperands();
     }
 
     public void add(char ch) {
@@ -31,6 +29,11 @@ public class ExpressionItem {
             result *= Long.valueOf(sb.toString());
         }
         return result;
+    }
+
+    private void updateOperands() {
+        currentOperand = new StringBuilder();
+        operands.add(currentOperand);
     }
 
 }
