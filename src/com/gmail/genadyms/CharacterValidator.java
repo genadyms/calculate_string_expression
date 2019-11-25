@@ -7,8 +7,8 @@ import java.util.Set;
 public class CharacterValidator {
     private final Set<Character> digits;
 
-    public CharacterValidator(List<Character> allowedChars) {
-        this.digits = new HashSet<>(allowedChars);
+    public CharacterValidator(List<Character> digits) {
+        this.digits = new HashSet<>(digits);
     }
 
     public void validateChar(char ch) throws UnsupportedCharacterException {
