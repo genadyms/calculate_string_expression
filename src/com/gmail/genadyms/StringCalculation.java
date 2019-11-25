@@ -1,8 +1,6 @@
 package com.gmail.genadyms;
 
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 public class StringCalculation {
     private final static char MULTIPLY_CHAR = '*';
